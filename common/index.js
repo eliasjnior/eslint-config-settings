@@ -1,74 +1,56 @@
 module.exports = {
-  "env": {
-    "es2021": true,
-    "node": true
+  env: {
+    es2021: true,
+    jest: true,
   },
-  "extends": [
-    "standard",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+  extends: [],
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
   },
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "eslint-plugin-import-helpers"
-  ],
-  "rules": {
-    "prettier/prettier": [
-      "error",
+  plugins: ['react', 'prettier', 'eslint-plugin-import-helpers'],
+  rules: {
+    'prettier/prettier': [
+      'error',
       {
-        "singleQuote": true,
-        "trailingComma": "all",
-        "arrowParens": "always",
-        "semi": false
-      }
+        singleQuote: true,
+        trailingComma: 'all',
+        arrowParens: 'always',
+        semi: true,
+      },
     ],
-    "no-use-before-define": "off",
-    "import/prefer-default-export": "off",
-    "comma-dangle": ["error", "always-multiline"],
-    "newline-before-return": "error",
-    "react/prop-types": "off",
-    "camelcase": "off",
-    "import-helpers/order-imports": [
-      "error",
+    'import-helpers/order-imports': [
+      'error',
       {
-        "newlinesBetween": "always",
-        "groups":[
-          "/^@//",
-          "module",
-          [
-            "parent",
-            "sibling",
-            "index"
-          ]
+        newlinesBetween: 'always',
+        groups: [
+          ['/^react$/', '/^react-dom$/'],
+          ['/^@//', '/^src//', '/^~//'],
+          'module',
+          ['parent', 'sibling', 'index'],
         ],
-        "alphabetize":{
-          "order":"asc",
-          "ignoreCase":true
-        }
-      }
+        alphabetize: {
+          order: 'asc',
+          ignoreCase: true,
+        },
+      },
     ],
-    "sort-imports":[
-      "error",
+    'sort-imports': [
+      'error',
       {
-        "ignoreDeclarationSort":true
-      }
+        ignoreDeclarationSort: true,
+      },
     ],
-    "no-restricted-imports": [
-      "error",
+    '@typescript-eslint/no-explicit-any': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'object-curly-newline': [
+      'error',
       {
-        "patterns": ["./*", "../*"]
-      }
+        ObjectExpression: { consistent: true, multiline: true },
+        ObjectPattern: { consistent: true, multiline: true },
+        ImportDeclaration: 'never',
+        ExportDeclaration: { multiline: true, minProperties: 3 },
+      },
     ],
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-unused-vars": "error"
-  }
-}
+  },
+};
