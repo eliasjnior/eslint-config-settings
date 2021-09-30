@@ -13,8 +13,8 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        arrowParens: 'avoid',
-        bracketSpacing: false,
+        arrowParens: 'always',
+        bracketSpacing: true,
         jsxSingleQuote: false,
         printWidth: 100,
         proseWrap: 'always',
