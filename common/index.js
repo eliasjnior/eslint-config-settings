@@ -1,5 +1,3 @@
-const prettierAirbnb = require('prettier-airbnb-config');
-
 module.exports = {
   env: {
     es2021: true,
@@ -12,7 +10,22 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
-    'prettier/prettier': ['error', prettierAirbnb],
+    'prettier/prettier': [
+      'error',
+      {
+        arrowParens: 'avoid',
+        bracketSpacing: false,
+        jsxSingleQuote: false,
+        printWidth: 100,
+        proseWrap: 'always',
+        quoteProps: 'as-needed',
+        semi: true,
+        singleQuote: true,
+        tabWidth: 2,
+        trailingComma: 'es5',
+        useTabs: false,
+      },
+    ],
     'import-helpers/order-imports': [
       'error',
       {
