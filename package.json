@@ -1,6 +1,6 @@
 {
   "name": "@eliasjnior/eslint-config-settings",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -26,6 +26,7 @@
     "eslint-plugin-react": "^7.26.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.2",
+    "prettier-airbnb-config": "^1.0.0",
     "typescript": "^4.4.3"
   },
   "peerDependencies": {
@@ -43,6 +44,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.26.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "prettier-airbnb-config": "^1.0.0"
   }
 }

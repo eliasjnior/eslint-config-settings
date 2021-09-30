@@ -10,20 +10,14 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks'],
   rules: {
-    'react/no-unescaped-entities': 'off',
+    'react/no-unescaped-entities': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/prop-types': 'off',
-    'react/self-closing-comp': [
-      'error',
-      {
-        component: true,
-        html: true,
-      },
-    ],
     'react/react-in-jsx-scope': 'off',
     'react/display-name': 'off',
-    'react/jsx-filename-extension': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
   settings: {
     react: {

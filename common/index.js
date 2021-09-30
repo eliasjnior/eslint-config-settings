@@ -1,24 +1,18 @@
+const prettierAirbnb = require('prettier-airbnb-config');
+
 module.exports = {
   env: {
     es2021: true,
     jest: true,
   },
-  extends: [],
+  extends: ['plugin:prettier/recommended'],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'eslint-plugin-import-helpers'],
+  plugins: ['react', '@typescript-eslint', 'eslint-plugin-import-helpers'],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'all',
-        arrowParens: 'always',
-        semi: true,
-      },
-    ],
+    'prettier/prettier': ['error', prettierAirbnb],
     'import-helpers/order-imports': [
       'error',
       {
@@ -42,15 +36,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-explicit-any': 'off',
-    'react/jsx-one-expression-per-line': 'off',
-    'object-curly-newline': [
-      'error',
-      {
-        ObjectExpression: { consistent: true, multiline: true },
-        ObjectPattern: { consistent: true, multiline: true },
-        ImportDeclaration: 'never',
-        ExportDeclaration: { multiline: true, minProperties: 3 },
-      },
-    ],
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'import/no-extraneous-dependencies': 'off',
   },
 };
