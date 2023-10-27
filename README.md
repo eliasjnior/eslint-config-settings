@@ -40,3 +40,17 @@ module.exports = {
   }
 }
 ```
+
+# Source code
+
+## Testing out
+
+Run the NPM link inside this project to link the project:
+```
+npm link
+```
+
+Run the other command inside the project:
+```
+npm link @eliasjnior/eslint-config-settings
+```
