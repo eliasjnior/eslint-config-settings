@@ -16,6 +16,7 @@ module.exports = {
     "@typescript-eslint/eslint-plugin",
     "unused-imports",
     "eslint-plugin-import-helpers",
+    "no-relative-import-paths",
   ],
   rules: {
     "prettier/prettier": "error",
@@ -57,6 +58,10 @@ module.exports = {
       {
         ignoreDeclarationSort: true,
       },
+    ],
+    "no-relative-import-paths/no-relative-import-paths": [
+      "warn",
+      { allowSameFolder: true, prefix: "@", rootDir: "src/" },
     ],
   },
   settings: {

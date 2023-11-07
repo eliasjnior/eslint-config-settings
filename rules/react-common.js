@@ -16,6 +16,7 @@ module.exports = {
     "react/display-name": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
+    "react/self-closing-comp": "error",
     "react/function-component-definition": [
       "error",
       {
